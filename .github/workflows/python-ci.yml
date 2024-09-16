@@ -1,4 +1,4 @@
-name: Simple SonarQube Scan
+name: Simple SonarQube
 
 on:
   push:
@@ -22,5 +22,10 @@ jobs:
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
       env:
+<<<<<<< HEAD
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+=======
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} //Sonar Token generated 
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} example URL (https://sq.bswlog.co.in/)
+>>>>>>> 536cc77f7332f4e3277d8ebe5cb637485b1fe670
