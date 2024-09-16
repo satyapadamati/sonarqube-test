@@ -1,4 +1,4 @@
-name: Simple SonarQube Scan
+name: Simple SonarQube
 
 on:
   push:
