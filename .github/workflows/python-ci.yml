@@ -36,7 +36,9 @@ jobs:
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
       with:
         args: >
+          -Dsonar.verbose=true
           -Dsonar.projectKey=satyapadamati_sonarqube-test
           -Dsonar.organization=satyapadamati
-          -Dsonar.sources=app.py
+          -Dsonar.sources=.
           -Dsonar.python.coverage.reportPaths=coverage.xml
+          -X
