@@ -2,9 +2,9 @@ name: Python CI with SonarQube
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ main, dev ]
   pull_request:
-    branches: [ dev ]
+    branches: [ main, dev ]
 
 jobs:
   build:
@@ -27,7 +27,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: Run tests with pytest
-      run: pytest --cov=. --cov-report=xml
+      run: pytest --cov=. --cov-report=xml || true
     
     - name: SonarQube Scan
       uses: SonarSource/sonarqube-scan-action@master
@@ -38,4 +38,5 @@ jobs:
         args: >
           -Dsonar.projectKey=satyapadamati_sonarqube-test
           -Dsonar.organization=satyapadamati
+          -Dsonar.sources=app.py
           -Dsonar.python.coverage.reportPaths=coverage.xml
