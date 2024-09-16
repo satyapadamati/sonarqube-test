@@ -1,4 +1,4 @@
-name: Simple SonarQube
+name: Simple SonarQube Scan
 
 on:
   push:
@@ -27,5 +27,5 @@ jobs:
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 =======
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} //Sonar Token generated 
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} example URL (https://sq.bswlog.co.in/)
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} 
 >>>>>>> 536cc77f7332f4e3277d8ebe5cb637485b1fe670
